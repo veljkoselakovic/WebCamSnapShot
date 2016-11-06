@@ -5,6 +5,9 @@ A simple security script that catches whoever logs into your computer, written i
    * A Pushbullet account(You will get API access token from here https://www.pushbullet.com/#settings/account)
    * A working web-cam on you computer
    * A computer with an OS that supports task schedulers (cron, Task Scheduler on Windows, etc...)
+   * Python 3.4 or lower (pygame does not support Python 3.5 unfortunately)
+   * pygame
+   * pushbullet python module
    
    
 # How does it work?
