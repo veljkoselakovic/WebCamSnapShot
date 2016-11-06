@@ -1,7 +1,7 @@
-__author__ = 'ljove'
+
 from pushbullet import PushBullet
 
-pb = PushBullet('o.TqvQB2QOcjdfu4TY5WEPHpy0lhbiGq4B')
+pb = PushBullet('YOUR API_TOKEN')
 import datetime
 
 def take_picture(path_):
@@ -19,12 +19,12 @@ time = datetime.datetime.now()
 import os
 acc = os.getlogin()
 
-h440n = pb.devices[0]
+phone = pb.devices[0]
 take_picture('C:\\Users\\' + acc + '\\Desktop\\photo.bmp')
 
 with open('C:\\Users\\' + acc + '\\Desktop\\photo.bmp', "rb") as pic:
     file_data = pb.upload_file(pic, "picture.jpg")
 
-pb.push_note("Log in to account " + acc + " at " + str(time), "Pogledaj tu ruznu facu", device=h440n)
+pb.push_note("Log in to account " + acc + " at " + str(time), "", device=phone)
 
 push = pb.push_file(**file_data)
